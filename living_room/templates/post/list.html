@@ -1,0 +1,13 @@
+{% block title %}Teste{% endblock %}
+
+{% block content %}
+  {% for room in rooms %}
+    <h2>
+      <a href="{{ room.get_absolute_url }}">
+        {{ room.title }}
+      </a>
+    </h2>
+  {% endfor %}
+
+
+{% endblock %}

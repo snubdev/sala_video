@@ -1,0 +1,20 @@
+{% load embed_video_tags %}
+
+{% block content %}
+
+  <div>
+    {% video room.video as my_video %}
+      {{ my_video.url }}
+      {{ my_video.thumbnail }}
+      {{ my_video.backend }}
+      {% video my_video "large" %}
+    {% endvideo %}
+
+    {% video my_video '800x600' %}
+  </div>
+
+  <h1>
+    {{ room }}
+  </h1>
+
+{% endblock %}
