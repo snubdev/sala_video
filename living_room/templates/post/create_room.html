@@ -1,0 +1,8 @@
+{% block title %}Criar Sala{% endblock %}
+
+{% block content %}
+  <form method="post">
+      {{ room_form.as_p }}
+      <input type="submit" value="enviar">
+  </form>
+{% endblock %}
